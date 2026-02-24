@@ -34,8 +34,6 @@ import {
   MOCK_COMPANY_DATA,
 } from "../mockData";
 import { Document, Task } from "../types";
-import { useQuery } from "convex/react";
-import { api } from "@/convex/_generated/api";
 
 interface DashboardProps {
   onNavigateToDocument: (docId: string) => void;
@@ -51,8 +49,6 @@ const Dashboard: React.FC<DashboardProps> = ({
   const [tasks, setTasks] = useState(MOCK_TASKS);
   const [selectedTask, setSelectedTask] = useState<Task | null>(null);
   const [selectedAIHint, setSelectedAIHint] = useState<any | null>(null);
-  const documentsFromDb = useQuery(api.companyDocuments.getByCompany);
-  const [isTestModalOpen, setIsTestModalOpen] = useState(false);
 
   const toggleTaskStatus = (id: string, completed: boolean) => {
     setTasks((prev) =>
