@@ -15,6 +15,7 @@ import type * as companyDocuments from "../companyDocuments.js";
 import type * as contractors from "../contractors.js";
 import type * as employees from "../employees.js";
 import type * as invoices from "../invoices.js";
+import type * as seed from "../seed.js";
 import type * as tasks from "../tasks.js";
 import type * as taxObligations from "../taxObligations.js";
 
@@ -32,6 +33,7 @@ declare const fullApi: ApiFromModules<{
   contractors: typeof contractors;
   employees: typeof employees;
   invoices: typeof invoices;
+  seed: typeof seed;
   tasks: typeof tasks;
   taxObligations: typeof taxObligations;
 }>;
